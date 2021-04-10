@@ -3,7 +3,7 @@ import MainBlock from '../pages/mainBlock';
 import SecondBlock from '../pages/secondBlock/secondBlock';
 import ThirdBlock from '../pages/thirdBlock';
 
-import {useEffect, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 import {SheetContext} from '../../context/sheetContext';
 
@@ -12,6 +12,31 @@ function App() {
     const [activeSheet, setActiveSheet] = useState(1);
     const [{start, end}, setTouch] = useState({start: 0, end: 0});
     const [fromUp, setFromUp] = useState(false)
+    const [valueOnRange, setValueOnRange] = useState(0);
+
+    const refRange = useRef(null)
+
+    const changeValue = (e) => {
+        let value = e;
+        if (typeof (e) === 'object') {
+            value = e.target.value
+        }
+        setValueOnRange(value)
+        refRange.current.style.background = `linear-gradient(to right, #d1eaff 0%, #d1eaff ${value}%, #435063 ${value}%, #435063 100%)`
+    }
+
+    const finishSelect = () => {
+        if (valueOnRange <= 26) {
+            setValueOnRange(0)
+            changeValue(0)
+        } else if (valueOnRange > 26 && valueOnRange < 71) {
+            setValueOnRange(50)
+            changeValue(50)
+        } else if (valueOnRange >= 70) {
+            setValueOnRange(100)
+            changeValue(100)
+        }
+    }
 
     useEffect(() => {
         if (start - end > 100) {
@@ -23,6 +48,11 @@ function App() {
     }, [end]);
 
     const setActiveDot = (id) => {
+        if (id > activeSheet) {
+            setFromUp(false)
+        } else {
+            setFromUp(true)
+        }
         setActiveSheet(id)
     }
 
@@ -76,7 +106,11 @@ function App() {
                     incActive: incActive,
                     scrollEventStart: scrollEventStart,
                     scrollEventEnd: scrollEventEnd,
-                    fromUp: fromUp
+                    isFromUp: fromUp,
+                    refRange: refRange,
+                    changeValue: changeValue,
+                    finishSelect: finishSelect,
+                    valueOnRange: valueOnRange,
                 }
             }>
                 <Wrapper>

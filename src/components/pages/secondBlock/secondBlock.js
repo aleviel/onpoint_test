@@ -9,7 +9,7 @@ export default function SecondBlock() {
 
     const Context = useContext(SheetContext);
 
-    const fromUp = Context.fromUp
+    const fromUp = Context.isFromUp
 
     return (
         <div className={CN(Styles.wrapper, {[Styles.fromUp]: fromUp, [Styles.fromDown]: !fromUp})}>
