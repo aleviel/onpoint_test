@@ -9,6 +9,33 @@
     align-items: center;
 }
 
+.fromUp{
+    animation: fromUpAnim .5s ease-in;
+}
+
+@keyframes fromUpAnim {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+
+}
+
+.fromDown{
+    animation: fromDown .5s ease-in;
+}
+
+@keyframes fromDown {
+    from {
+        margin-top: 350px;
+    }
+    to {
+        margin-top: 0;
+    }
+}
+
 .header {
     font-size: 50px;
     text-align: end;

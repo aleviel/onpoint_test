@@ -1,8 +1,17 @@
 .slider__wrapper {
     width: 100vw;
     height: 100vh;
+    animation: init .5s ease-in;
 }
 
+@keyframes init {
+    from {
+        margin-top: 350px;
+    }
+    to {
+        margin-top: 0;
+    }
+}
 .range__wrapper {
     position: absolute;
     left: 50%;
@@ -11,6 +20,17 @@
 }
 
 .range {
+    appearance: none;
     width: 620px;
+    border-color: #000;
+    height: 13px;
+    background: #435063;
+}
 
+
+.range::-webkit-slider-thumb {
+    appearance: none;
+    height: 60px;
+    width: 45px;
+    background: url("./assets/Polygon.png") center / cover no-repeat;
 }

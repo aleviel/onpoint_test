@@ -4,11 +4,17 @@
     height: 100%;
     color: #0d319c;
     background: url("assets/main_bg.jpg") center / cover no-repeat;
+    animation: init .5s linear;
 }
 
-.img {
-    max-width: 100%;
-    object-fit: cover;
+@keyframes init {
+    from {
+        margin-top: -512px;
+    }
+    to {
+        margin-top: 0;
+    }
+
 }
 
 .main__header {
@@ -22,7 +28,6 @@
     font-size: 20px;
     position: absolute;
 }
-
 
 .ball {
     position: absolute;
@@ -65,13 +70,12 @@
 }
 
 .CC__ball::after {
-    width: 10px;
-    height: 10px;
+    animation: pulse2 1s infinite linear;
 }
 
 .CC__ball::before {
-    width: 5px;
-    height: 5px;
+    animation: pulse2 1s infinite ease-in;
+    animation-delay: .3s;
 }
 
 .hypo__ball {
@@ -83,13 +87,23 @@
 }
 
 .hypo__ball::after {
-    width: 20px;
-    height: 20px;
+    animation: pulse3 1s infinite ease-in;
+    animation-delay: .3s;
 }
 
 .hypo__ball::before {
-    width: 10px;
-    height: 10px;
+    animation: pulse3 1s infinite linear;
+}
+
+@keyframes pulse3 {
+    from {
+        width: 5px;
+        height: 5px;
+    }
+    to {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 .SD {
@@ -105,13 +119,23 @@
 }
 
 .SD__ball::after {
-    width: 20px;
-    height: 20px;
+    animation: pulse2 infinite 1s ease-in;
+    animation-delay: .3s;
 }
 
 .SD__ball::before {
-    width: 10px;
-    height: 10px;
+    animation: pulse2 infinite 1s linear;
+}
+
+@keyframes pulse2 {
+    from {
+        width: 5px;
+        height: 5px;
+    }
+    to {
+        width: 13px;
+        height: 13px;
+    }
 }
 
 .Hb {
@@ -128,11 +152,21 @@
 }
 
 .Hb__ball::after {
-    width: 40px;
-    height: 40px;
+    animation: pulse infinite 2s linear;
+    animation-delay: .3s;
 }
 
 .Hb__ball::before {
-    width: 15px;
-    height: 15px;
+    animation: pulse infinite 1s ease-in;
+}
+
+@keyframes pulse {
+    from {
+        width: 15px;
+        height: 15px;
+    }
+    to {
+        width: 40px;
+        height: 40px;
+    }
 }

@@ -11,6 +11,7 @@ function App() {
 
     const [activeSheet, setActiveSheet] = useState(1);
     const [{start, end}, setTouch] = useState({start: 0, end: 0});
+    const [fromUp, setFromUp] = useState(false)
 
     useEffect(() => {
         if (start - end > 100) {
@@ -28,6 +29,11 @@ function App() {
     const incActive = (value) => {
         if (activeSheet + value !== 0 && activeSheet + value !== 4) {
             setActiveSheet(activeSheet => activeSheet + value)
+        }
+        if (value === -1) {
+            setFromUp(true)
+        } else {
+            setFromUp(false)
         }
     }
 
@@ -70,6 +76,7 @@ function App() {
                     incActive: incActive,
                     scrollEventStart: scrollEventStart,
                     scrollEventEnd: scrollEventEnd,
+                    fromUp: fromUp
                 }
             }>
                 <Wrapper>

@@ -9,15 +9,25 @@
 .arrow::after, arrow::before {
     content: '';
     position: absolute;
-    top: 0;
     left: 50%;
     width: 32px;
     height: 32px;
     border-bottom: 2px white solid;
     border-right: 2px white solid;
     transform: translateX(-50%) translateY(50%) rotate(45deg);
+    animation: jumping 1s infinite ease-in;
 }
 
 .hidden {
     display: none;
+}
+
+@keyframes jumping {
+    from {
+        top: 0;
+    }
+    to {
+        top: 20px;
+    }
+
 }
