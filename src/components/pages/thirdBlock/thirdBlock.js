@@ -51,6 +51,11 @@ export default function ThirdBlock() {
                         className={Styles.range} type="range"
                         value={valueOnRange}
                     />
+                    <div className={Styles.range__years}>
+                        <span>1988</span>
+                        <span>2009</span>
+                        <span>2016</span>
+                    </div>
                 </div>
             </div>
         </>

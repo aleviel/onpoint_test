@@ -18,7 +18,7 @@ export default function Slide1() {
 
                     <div className={Styles.top}>
                         1 <br/> &beta;-клетки
-                        <div className={CN(Styles.bubble, Styles.beta)}>
+                        <div className={CN(Styles.bubble)}>
                             <img className={Styles.beta__img} src={beta} alt="beta"/>
                         </div>
                     </div>

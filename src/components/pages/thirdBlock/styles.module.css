@@ -12,10 +12,11 @@
         margin-top: 0;
     }
 }
+
 .range__wrapper {
     position: absolute;
     left: 50%;
-    bottom: 10%;
+    bottom: 5%;
     transform: translateX(-50%);
 }
 
@@ -33,4 +34,12 @@
     height: 60px;
     width: 45px;
     background: url("./assets/Polygon.png") center / cover no-repeat;
+}
+
+.range__years {
+    display: flex;
+    justify-content: space-between;
+    color: #d1eaff;
+    font-size: 20px;
+    margin-top: 20px;
 }
