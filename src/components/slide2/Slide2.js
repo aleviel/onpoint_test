@@ -16,66 +16,67 @@ export default function Slide2() {
             </div>
 
             <div className={Styles.routes}>
-                <div className={Styles.top}>
-                    <div className={CN(Styles.item, Styles.block__bubble)}>
-                        Инкретиновый <br/> эффект
-                        <div className={CN(Styles.bubble)}>
-                            2
-                        </div>
-                    </div>
-                    <div className={Styles.item}>
-                        1<br/>
-                        &beta;-клетки
-                        <div className={CN(Styles.bubble)}>
-                            &beta;
-                        </div>
-                    </div>
-                    <div className={CN(Styles.item, Styles.block__bubble)}>
-                        <div className={CN(Styles.bubble)}>
-                            3
-                        </div>
-                        Дефект
-                        α-клеток
+                <div className={CN(Styles.item1, Styles.item)}>
+                    Инкретиновый <br/> эффект
+                    <div className={CN(Styles.bubble)}>
+                        <span className={Styles.number}>2</span>
                     </div>
                 </div>
-                <div className={Styles.middle}>
-                    <div className={Styles.item} F>
-                        8 Почки
-                        <div className={CN(Styles.bubble)}>
-                            <img src={lipid} alt="lipid"/>
-                        </div>
-                    </div>
-                    <div className={Styles.item}>
-                        <div className={Styles.hypo__block}>
-                            Гипогликемия
-                        </div>
-                    </div>
-                    <div className={Styles.item}>
-                        <div className={CN(Styles.bubble)}>
-                            <img src={lipid2} alt="lipid"/>
-                        </div>
-                        4 Жировые клетки
+                <div className={CN(Styles.item2, Styles.item)}>
+                    <span className={Styles.number}>1</span>
+                    &beta;-клетки
+                    <div className={CN(Styles.bubble)}>
+                        &beta;
                     </div>
                 </div>
-                <div className={Styles.bottom}>
-                    <div className={Styles.item}>
-                        <div className={CN(Styles.bubble)}>
-                            <img src={brain} alt="brain"/>
-                        </div>
-                        7 <br/> Головной мозг
+                <div className={CN(Styles.item3, Styles.item)}>
+                    <div className={CN(Styles.bubble)}>
+                        <span className={Styles.number}>3</span>
                     </div>
-                    <div className={Styles.item}>
-                        <div className={CN(Styles.bubble)}>
-                            <img src={liver} alt="liver"/>
-                        </div>
-                        6 <br/> Печень
+                    Дефект <br/>
+                    α-клеток
+                </div>
+                <div className={CN(Styles.item4, Styles.item)}>
+                    <div style={{'padding': '20px'}}>
+                        <span className={Styles.number}>8</span>
+                        Почки
                     </div>
-                    <div className={Styles.item}>
-                        <div className={CN(Styles.bubble)}>
-                            <img src={muscle} alt="muscle"/>
-                        </div>
-                        5 <br/> Мышцы
+                    <div className={CN(Styles.bubble)}>
+                        <img src={lipid} alt="lipid"/>
                     </div>
+                </div>
+                <div className={CN(Styles.item5, Styles.item)}>
+                    <div className={Styles.hypo__block}>
+                        Гипогликемия
+                    </div>
+                </div>
+                <div className={CN(Styles.item6, Styles.item)}>
+                    <div className={CN(Styles.bubble)}>
+                        <img src={lipid2} alt="lipid"/>
+                    </div>
+                    <div style={{'padding': '10px'}}>
+                        <span className={Styles.number}> 4 </span>
+                        Жировые клетки
+                    </div>
+                </div>
+                <div className={CN(Styles.item7, Styles.item)}>
+                    <div className={CN(Styles.bubble)}>
+                        <img src={brain} alt="brain"/>
+                    </div>
+                    <span className={Styles.number}>7</span> Головной мозг
+                </div>
+                <div className={CN(Styles.item8, Styles.item)}>
+                    <div className={CN(Styles.bubble)}>
+                        <img src={liver} alt="liver"/>
+                    </div>
+                    <span className={Styles.number}>6</span>
+                    Печень
+                </div>
+                <div className={CN(Styles.item9, Styles.item)}>
+                    <div className={CN(Styles.bubble)}>
+                        <img src={muscle} alt="muscle"/>
+                    </div>
+                    <span className={Styles.number}>5</span> Мышцы
                 </div>
             </div>
 

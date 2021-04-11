@@ -21,54 +21,105 @@
     font-size: 30px;
 }
 
-.routes {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    height: 475px;
+.number {
+    font-size: 40px;
+    padding: 2px;
+    display: block;
 }
 
-.top, .middle, .bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
+.routes {
+    display: grid;
+    height: 70%;
+    width: 75%;
+    grid-template-areas:
+            "a  a  b  c  c"
+            "a1 b1 b1 b1 c1"
+            "a2 a2 b2 c2 c2";
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(3, 1fr);
+    font-size: 20px;
 }
 
 .item {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    height: 125px;
+    display: flex;
+    flex-direction: row;
 }
+
+.item2, .item7, .item8, .item9 {
+    flex-direction: column;
+    text-align: center;
+}
+
+.item1, .item3 {
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.item1, .item4 {
+    text-align: right;
+}
+
+.item1 {
+    grid-area: a;
+    margin-left: 7%;
+}
+
+.item2 {
+    grid-area: b;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.item3 {
+    grid-area: c;
+    margin-left: -20%;
+}
+
+.item4 {
+    grid-area: a1;
+}
+
+.item5 {
+    grid-area: b1;
+}
+
+.item6 {
+    grid-area: c1;
+}
+
+.item7 {
+    grid-area: a2;
+    margin-left: 50%;
+}
+
+.item8 {
+    grid-area: b2;
+}
+
+.item9 {
+    grid-area: c2;
+    margin-left: -150px;
+}
+
 
 .bubble {
     font-size: 62px;
     position: relative;
     z-index: 2;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-}
-
-.block__bubble {
-    display: flex;
-    flex-direction: row;
-    text-align: right;
 }
 
 .bubble::after {
     content: '';
     display: block;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     z-index: -1;
     position: absolute;
     top: 0%;
@@ -85,4 +136,5 @@
     justify-content: center;
     align-items: center;
     border: 1px solid white;
+    font-size: 25px;
 }
