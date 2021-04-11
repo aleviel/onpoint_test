@@ -93,115 +93,31 @@
     margin-bottom: -15px;
 }
 
-.beta__arrow {
+.arrow {
     position: relative;
-    width: 70px;
-    top: 40px;
     height: 1px;
     background: white;
     transform: rotate(90deg);
 }
 
-.beta__arrow:before,
-.beta__arrow:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 40px solid transparent;
-    border-right: 0;
-}
-
-.beta__arrow::after {
-    top: -5px;
-    right: -10px;
-    border-left-color: white;
-    border-width: 6px 0 6px 20px;
+.beta__arrow {
+    width: 70px;
+    top: 40px;
+    transform: rotate(90deg);
 }
 
 .hypo__leftArrow {
-    position: relative;
     width: 50px;
     top: -40px;
     left: -165px;
-    height: 1px;
-    background: white;
     transform: rotate(0deg);
 }
 
-.hypo__leftArrow:before,
-.hypo__leftArrow:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 40px solid transparent;
-    border-right: 0;
-}
-
-.hypo__leftArrow::after {
-    top: -5px;
-    right: -10px;
-    border-left-color: white;
-    border-width: 6px 0 6px 20px;
-}
-
 .hypo__rightArrow {
-    position: relative;
     width: 50px;
     top: -40px;
     left: 160px;
-    height: 1px;
-    background: white;
     transform: rotate(180deg);
-}
-
-.hypo__rightArrow:before,
-.hypo__rightArrow:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 40px solid transparent;
-    border-right: 0;
-}
-
-.hypo__rightArrow::after {
-    top: -5px;
-    right: -10px;
-    border-left-color: white;
-    border-width: 6px 0 6px 20px;
-}
-
-.liver__arrow {
-    position: absolute;
-    width: 190px;
-    top: 40px;
-    left: -170px;
-    height: 1px;
-    background: white;
-    transform: rotate(40deg);
-}
-
-.liver__arrow:before,
-.liver__arrow:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 40px solid transparent;
-    border-right: 0;
-}
-
-.liver__arrow::after {
-    top: -5px;
-    right: -10px;
-    border-left-color: white;
-    border-width: 6px 0 6px 20px;
 }
 
 .muscle__arrow {
@@ -209,13 +125,19 @@
     width: 190px;
     top: 40px;
     left: 85px;
-    height: 1px;
-    background: white;
     transform: rotate(140deg);
 }
 
-.muscle__arrow:before,
-.muscle__arrow:after {
+.liver__arrow {
+    position: absolute;
+    width: 190px;
+    top: 40px;
+    left: -170px;
+    transform: rotate(40deg);
+}
+
+.arrow:before,
+.arrow:after {
     content: "";
     display: block;
     position: absolute;
@@ -225,7 +147,7 @@
     border-right: 0;
 }
 
-.muscle__arrow::after {
+.arrow::after {
     top: -5px;
     right: -10px;
     border-left-color: white;

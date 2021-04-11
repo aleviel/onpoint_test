@@ -21,7 +21,7 @@ export default function Slide1() {
                         <div className={CN(Styles.bubble)}>
                             <img className={Styles.beta__img} src={beta} alt="beta"/>
                         </div>
-                        <span className={Styles.beta__arrow}></span>
+                        <span className={CN(Styles.beta__arrow, Styles.arrow)}></span>
                     </div>
 
                     <div className={Styles.bottom}>
@@ -30,21 +30,21 @@ export default function Slide1() {
                             <div className={Styles.bubble}>
                                 <img src={muscle} alt="muscle"/>
                             </div>
-                            <span className={Styles.muscle__arrow}></span>
+                            <span className={CN(Styles.muscle__arrow, Styles.arrow)}></span>
                         </div>
                         <div className={Styles.item}>
                             <div className={Styles.hypo__block}>
                                 гипогликемия
                             </div>
-                            <span className={Styles.hypo__leftArrow}></span>
-                            <span className={Styles.hypo__rightArrow}></span>
+                            <span className={CN(Styles.hypo__leftArrow, Styles.arrow)}></span>
+                            <span className={CN(Styles.hypo__rightArrow, Styles.arrow)}></span>
                         </div>
                         <div className={Styles.item}>
                             3 <br/> печень
                             <div className={Styles.bubble}>
                                 <img className={Styles.liver__img} src={liver} alt="liver"/>
                             </div>
-                            <span className={Styles.liver__arrow}></span>
+                            <span className={CN(Styles.liver__arrow, Styles.arrow)}></span>
                         </div>
                     </div>
 

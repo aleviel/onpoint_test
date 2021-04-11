@@ -34,7 +34,7 @@
     grid-template-areas:
             "a  a  b  c  c"
             "a1 b1 b1 b1 c1"
-            "a2 a2 b2 c2 c2";
+            ". a2 b2 c2 .";
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: repeat(3, 1fr);
     font-size: 20px;
@@ -45,6 +45,7 @@
     align-items: center;
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 .item2, .item7, .item8, .item9 {
@@ -91,7 +92,6 @@
 
 .item7 {
     grid-area: a2;
-    margin-left: 50%;
 }
 
 .item8 {
@@ -100,7 +100,6 @@
 
 .item9 {
     grid-area: c2;
-    margin-left: -150px;
 }
 
 
@@ -137,4 +136,77 @@
     align-items: center;
     border: 1px solid white;
     font-size: 25px;
+}
+
+.arrow {
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    background: white;
+}
+
+.item1__arrow {
+    top: 170px;
+    left: 200px;
+    transform: rotate(90deg);
+}
+
+.item2__arrow {
+    top: 170px;
+    left: 65px;
+    transform: rotate(90deg);
+}
+
+.item3__arrow {
+    top: 170px;
+    left: 135px;
+    transform: rotate(90deg);
+}
+
+.item4__arrow {
+    top: 50%;
+    left: 100%;
+    transform: rotate(0deg);
+}
+
+.item6__arrow {
+    top: 50%;
+    left: -20%;
+    transform: rotate(180deg);
+}
+
+.item7__arrow {
+    top: 5px;
+    left: 65px;
+    transform: rotate(-90deg);
+}
+
+.item8__arrow {
+    top: 5px;
+    left: 65px;
+    transform: rotate(-90deg);
+}
+
+.item9__arrow {
+    top: 5px;
+    left: 65px;
+    transform: rotate(-90deg);
+}
+
+.arrow:after,
+.arrow:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 40px solid transparent;
+    border-right: 0;
+}
+
+.arrow::after {
+    top: -5px;
+    right: -10px;
+    border-left-color: white;
+    border-width: 6px 0 6px 20px;
 }
